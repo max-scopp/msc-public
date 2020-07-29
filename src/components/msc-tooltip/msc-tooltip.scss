@@ -1,0 +1,27 @@
+@import "atoms/tooltip";
+
+msc-tooltip {
+  position: absolute;
+  margin-bottom: -3px; // remove whitespace
+
+  &.fixed {
+    position: fixed;
+  }
+
+  > .tooltip {
+    @extend %tooltip-base;
+
+    position: absolute;
+    -webkit-font-smoothing: antialiased;
+    opacity: 0;
+    pointer-events: none;
+
+    width: max-content;
+    max-width: 300px;
+  }
+
+  .hover,
+  &:hover > .tooltip {
+    animation: fwFadeIn $cb-authentic 400ms forwards;
+  }
+}

@@ -1,0 +1,26 @@
+@import "atoms/lists";
+
+:host {
+  --gap: #{rem(3px)};
+
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+
+  [hidden] {
+    display: none;
+  }
+}
+
+::slotted(*:not(:last-child)) {
+  margin-right: var(--gap);
+}
+
+::slotted(.is-hidden) {
+  position: absolute !important;
+  visibility: hidden !important;
+}
+
+:host(.auto-hides) {
+  white-space: nowrap;
+}

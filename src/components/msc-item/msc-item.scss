@@ -1,0 +1,32 @@
+@import "atoms/lists";
+
+:host {
+    @extend %list-item-base;
+
+    .after,
+    .before {
+        display: inline-flex;
+    }
+
+    .before {
+        grid-area: before;
+    }
+
+    .after {
+        grid-area: after;
+    }
+}
+
+:host(.is-last) {
+    border-bottom: none;
+}
+
+:host(.is-active) {
+    @extend %list-item-active;
+}
+
+:host(.is-interactive) {
+    cursor: pointer;
+
+    @extend %list-item-hoverable;
+}

@@ -1,0 +1,40 @@
+// internal
+$ms-plain-white: hsl(0, 0%, 100%);
+$ms-plain-black: hsl(0, 0%, 0%);
+
+// Overwriteable client defaults
+$c-shade-93: hsl(0, 0%, 93%) !default;
+$c-shade-86: hsl(0, 0%, 86%) !default;
+$c-shade-70: hsl(0, 0%, 70%) !default;
+// shadings in between redacted due to accessibility assurance
+$c-shade-42: hsl(0, 0%, 42%) !default;
+$c-shade-29: hsl(0, 0%, 29%) !default;
+$c-shade-22: hsl(0, 0%, 22%) !default;
+$c-shade-15: hsl(0, 0%, 15%) !default;
+
+// Client's WebApp defaults
+$fc-yellow: hsl(47, 100%, 60%) !default;
+$fc-green: hsl(121, 90%, 45%) !default;
+$fc-blue: hsl(210, 100%, 45%) !default;
+$fc-cyan: hsl(186, 100%, 50%) !default;
+$fc-red: hsl(356, 100%, 46%) !default;
+
+$c-primary: hsl(282, 68%, 38%) !default;
+$c-primary-alt: hsl(279, 100%, 22%) !default;
+
+$c-alternative: hsl(152, 100%, 38%) !default;
+$c-alternative-alt: hsl(152, 76%, 22%) !default;
+
+$surface-light: $ms-plain-white !default;
+$surface-dark: hsl(0, 0%, 13%) !default;
+
+$c-black: $ms-plain-black !default;
+$c-black-26: rgba($ms-plain-black, 0.26) !default;
+$c-black-80: rgba($ms-plain-black, 0.8) !default;
+
+$c-white: $ms-plain-white !default;
+$c-white-26: rgba($ms-plain-white, 0.26) !default;
+$c-white-80: rgba($ms-plain-white, 0.8) !default;
+
+$c-text-on-dark-background: $ms-plain-white !default;
+$c-text-on-light-background: hsl(0, 0%, 7%) !default;

@@ -1,0 +1,43 @@
+::slotted(*) {
+  pointer-events: all;
+}
+
+:host(.center) > .content-span {
+  justify-content: center;
+}
+
+:host(.scroll) {
+  overflow-y: scroll;
+  min-height: auto;
+}
+
+:host {
+  display: block;
+  position: relative;
+
+  // height: inherit;
+  min-height: min-content;
+  width: 100%;
+
+  > .content-span {
+    --direction: row;
+
+    width: 100%;
+    height: 100%;
+    min-height: fill;
+    min-height: -webkit-fill-available;
+
+    pointer-events: none;
+    overflow: none;
+
+    display: flex;
+    flex-direction: var(--direction);
+
+    align-items: var(--align-y);
+    justify-content: var(--align-x);
+
+    ::slotted(*) {
+      flex-shrink: 0 !important;
+    }
+  }
+}

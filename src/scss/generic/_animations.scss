@@ -1,0 +1,65 @@
+@keyframes fwFadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fwSlideUp {
+  from {
+    transform: translateY(30%); //
+  }
+  to {
+    transform: translateY(0); //
+  }
+}
+
+@keyframes fwFadeOut {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fwScaleIn {
+  from {
+    transform: scale3d(0.88, 0.88, 1) rotate3d(1, 0, 0, 16deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: initial;
+  }
+}
+
+@keyframes fwScaleDown {
+  to {
+    opacity: 0;
+    transform: scale3d(1, 0, 1);
+  }
+}
+
+@keyframes fwScaleInBasic {
+  from {
+    transform: scale3d(0.6, 0.6, 1);
+  }
+
+  50% {
+    opacity: 0.4;
+  }
+
+  to {
+    opacity: 1;
+    transform: initial;
+  }
+}
+
+@keyframes rotateClockwise {
+  to {
+    transform: rotate3d(0, 0, 1, 360deg);
+  }
+}
+
+@keyframes rotateCounterClockwise {
+  to {
+    transform: rotate3d(0, 0, 1, -360deg);
+  }
+}

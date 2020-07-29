@@ -1,0 +1,62 @@
+@import "atoms/toast";
+
+msc-toast {
+  @extend %toast-base;
+  color: var(--color);
+
+  display: grid;
+  grid-auto-flow: row;
+  grid-auto-columns: auto;
+  grid-template-columns: 1fr auto;
+
+  cursor: pointer;
+
+  &.toast--indicator {
+    --background: transparent;
+
+    $steps: 60; // 60Hz, 60fps
+    $speed: 1.75s;
+    $speed-ratio: 0.6431718062;
+
+    #big-cog {
+      transform-origin: 13.56px 14.04px;
+      animation: rotateCounterClockwise $speed steps($steps) infinite;
+    }
+
+    #small-cog {
+      transform-origin: 4.38px 4.49px;
+      animation: rotateClockwise $speed steps(#{round($steps * $speed-ratio)}) infinite;
+    }
+  }
+  &.not-dismissable {
+    cursor: inherit;
+
+    &::after {
+      content: unset;
+    }
+  }
+
+  > p {
+    margin: 0;
+  }
+
+  > .icon {
+    grid-row: 1/-3;
+  }
+
+  &.toast--warning {
+    --background: var(--yellow);
+  }
+
+  &.toast--danger {
+    --background: var(--red);
+  }
+
+  &.toast--success {
+    --background: var(--green);
+  }
+
+  &.toast--info {
+    --background: var(--blue);
+  }
+}

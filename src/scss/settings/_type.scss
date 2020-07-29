@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css?family=Public+Sans:300,400,600|Roboto:300,400,500&display=swap");
+@import url("https://dev-cats.github.io/code-snippets/JetBrainsMono.css");
+
+$ff-fallback: system-ui, sans-serif !default;
+$ff-monospace: "IBM Plex Mono", "Fira Code", JetBrainsMono, Consolas, "Liberation Mono", Menlo, Courier, monospace,
+    $ff-fallback !default;
+$ff-code: "Operator Mono", $ff-monospace !default;
+
+$ff-main: "Roboto", $ff-fallback !default;
+$ff-alt: "Public Sans", $ff-fallback !default;
+
+$ff-sans: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+$ff-sans-condensed: Calibri, "PT Sans Narrow", sans-serif;
+
+$ff-roboto: "Roboto", Roboto, Roboto-Medium, $ff-sans;
+$ff-telekom: "telegrotesk-next", $ff-sans-condensed;

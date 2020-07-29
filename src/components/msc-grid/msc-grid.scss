@@ -1,0 +1,24 @@
+:host([center-items]) {
+  place-items: center;
+}
+
+:host([center-content]) {
+  place-content: center;
+}
+
+:host([squared]) {
+  grid-auto-rows: var(--base);
+}
+
+:host {
+  --gap: 20px;
+  --base: 300px;
+  --template: auto / repeat(auto-fit, minmax(var(--base), 1fr));
+
+  display: grid;
+  width: 100%;
+
+  gap: var(--gap);
+  grid-template: var(--template);
+  align-content: start;
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="de">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,
+      maximum-scale=5.0" />
+    <title>Component Studio</title>
+
+    <link href="/build/msc.css" rel="preload" as="style" onload="this.rel='stylesheet'" />
+
+    <script type="module" src="/build/msc.esm.js"></script>
+    <script nomodule src="/build/msc.js"></script>
+
+    <script src="https://unpkg.com/split-me/dist/split-me.js"></script>
+
+    <script>
+        Object.assign(window, {
+            __appTranslations: {
+                example: 'Example translation'
+            },
+            __appConfig: {
+                environment: "development",
+                appName: "demo-playground"
+            }
+        })
+
+        window.onerror = (error) => Controller.Toast.danger(error, 'Oh no! :(');
+    </script>
+</head>
+
+<body id="testpage">
+
+    <msc-title>Playground</msc-title>
+
+    <msc-content>
+
+        <p>Translation:
+            <script>
+                const script = document.currentScript;
+                document.addEventListener('DOMContentLoaded', () => {
+                    script.parentElement.append(Translations.example);
+                    script.parentElement.append(Translations.nested.example.translationThatDoesNotExist);
+                })
+            </script>
+        </p>
+
+        <msc-button state="good" onclick="document.getElementById('sidebar').toggle()">Open Sidebar</msc-button>
+
+        <msc-sidebar id="sidebar">
+            <msc-item>Entry</msc-item>
+        </msc-sidebar>
+
+        <msc-tooltip for="loader" position="bottom">Example Tooltip!</msc-tooltip>
+
+        <msc-loader id="loader">
+            loader subline
+        </msc-loader>
+
+        <msc-display-filter for="myList">
+            <msc-input type="text" />
+        </msc-display-filter>
+
+        <msc-list id="myList">
+            <msc-item>First entry</msc-item>
+            <msc-item>Second entry</msc-item>
+            <span>weird flex entry</span>
+        </msc-list>
+
+        <msc-form-field label="Ay buggar enter THE CODE">
+            <msc-input type="number"></msc-input>
+            <span slot="state" style="color: var(--red)">Everything seems broken! Abort!</span>
+        </msc-form-field>
+
+        <msc-title subline>Buttons & ButtonGroup (autohide mode)</msc-title>
+        <msc-button-group autohide>
+            <msc-button>Button one in group</msc-button>
+            <msc-button state="info">Info button</msc-button>
+            <msc-button state="warn" to="http://google.com/" target="_blank">Warning, google!</msc-button>
+            <msc-button theme="primary">Primary button</msc-button>
+        </msc-button-group>
+
+        <msc-content align-x="center" align-y="center" style="height: 100px">
+
+            <msc-badge>Badge me up</msc-badge>
+
+        </msc-content>
+
+        <msc-content align-x="center" center style="height: 400px; background: var(--cmp-borders)">
+
+            <msc-card>
+                <b>This is a card.</b>
+                <br>
+                That's it.
+            </msc-card>
+
+            <br />
+
+            <msc-card to="http://example.com/">
+                <b slot="lead">
+                    Card header
+                </b>
+
+                <msc-content>
+                    This is the content. Click me to buy!
+                </msc-content>
+
+                <footer slot="trailer">
+                    <small>&copy; someyear - somebody</small>
+                </footer>
+            </msc-card>
+
+        </msc-content>
+
+        <msc-button onClick="document.getElementById('collapsible').toggle()">Toggle collapsible</msc-button>
+        <msc-collapsible id="collapsible">
+            I'm collapsible! woaaa!!!
+        </msc-collapsible>
+
+        <msc-content>
+            <msc-title>List, ListMenu, Item, Icons</msc-title>
+
+            <msc-list>
+                <msc-item>This</msc-item>
+                <msc-item>Is</msc-item>
+                <msc-item>A</msc-item>
+                <msc-item>List</msc-item>
+            </msc-list>
+
+            <msc-menu>
+                <msc-item>This</msc-item>
+                <msc-item>Is</msc-item>
+                <msc-item>A</msc-item>
+                <msc-item>
+                    <span><b>Menu</b> List</span>
+                    <msc-icon slot="after"></msc-icon>
+                </msc-item>
+            </msc-menu>
+        </msc-content>
+
+        <msc-button onClick="Dialog.alert('Example', {closingX: true})">Open model (relative to viewport)</msc-button>
+        <msc-button onClick="Dialog.alert('Global Example', {global: true})">Open model (global)</msc-button>
+    </msc-content>
+</body>
+
+</html>

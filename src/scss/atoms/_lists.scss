@@ -1,0 +1,108 @@
+@import "card";
+
+$space: 2px !default;
+
+%list-core {
+  overflow: auto;
+}
+
+%list-base {
+  @extend %list-core;
+  @extend %card-core;
+  --space: #{$space} 0;
+}
+
+%list-item-base {
+  --border: var(--cmp-borders);
+
+  position: relative;
+
+  display: grid;
+  align-content: center;
+
+  grid-auto-rows: min-content;
+  grid-template-columns: min-content 1fr min-content;
+  grid-template-areas: "before content after";
+
+  padding: 0 rem(8px);
+  border-bottom: 1px solid var(--border);
+
+  min-height: rem(36px);
+
+  line-height: 1.6;
+  font-size: rem(15px);
+  font-family: var(--roboto);
+
+  user-select: none;
+  white-space: nowrap;
+}
+
+%list-item-hoverable {
+  &:hover,
+  &:focus {
+    background: var(--border);
+
+    + %list-item-base {
+      border-top-color: transparent;
+    }
+  }
+}
+
+%list-item-active {
+  box-shadow: inset 3px 0 0 0 var(--primary);
+}
+
+%menu-base {
+  @extend %list-base;
+
+  color: var(--color);
+  border-radius: 8px;
+
+  max-width: max-content;
+  min-width: 200px;
+}
+
+%dropdown-base {
+  @extend %menu-base;
+
+  overflow: hidden;
+  overflow-y: auto;
+
+  box-shadow: $bsh-small;
+  border-radius: rem(7px);
+  z-index: 1;
+}
+
+%sidebar-container-base {
+  --background: var(--bg-light);
+  --background-lead: var(--primary);
+  --border: var(--cmp-borders);
+
+  position: relative;
+  display: grid;
+  height: 100%;
+
+  min-width: 240px;
+  background: var(--background);
+
+  overflow: hidden;
+  overflow-y: auto;
+
+  user-select: none;
+  z-index: 1;
+
+  box-shadow: $bsh-outline;
+
+  transition: none $cb-authentic 240ms;
+  transition-property: transform, box-shadow;
+}
+
+%sidebar-container-visible {
+  // important here, because it's actually important...
+  transform: translateX(0) !important;
+  transition-duration: 0 !important;
+}
+
+%sidebar-container-active {
+  box-shadow: $bsh-big;
+}

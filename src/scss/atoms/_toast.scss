@@ -1,0 +1,43 @@
+@keyframes dismissBar {
+  to {
+    transform: scale3d(0, 1, 1);
+  }
+}
+
+%toast-base {
+  --background: var(--mode);
+
+  &:not(.toast--indicator) {
+    padding: 1em;
+    margin-bottom: 1em;
+
+    border: 1px solid var(--black-translucent);
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: var(--black-translucent);
+
+      transform-origin: left;
+
+      animation: dismissBar cubic-bezier(0.15, 0, 0.15, 0.3) infinite var(--time);
+    }
+  }
+
+  animation: fwSlideUp forwards $cb-decelerate 600ms;
+
+  position: relative;
+
+  box-shadow: #{$bsh-paper};
+  border-radius: rem(3px);
+  user-select: none;
+  background: var(--background);
+
+  > b {
+    opacity: 0.8;
+  }
+}

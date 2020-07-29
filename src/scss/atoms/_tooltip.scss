@@ -1,0 +1,19 @@
+%tooltip-base {
+  --background: var(--black-translucent-heavy);
+  --color: var(--text-on-dark);
+  --font: var(--sans);
+  --space: 0.3em 0.5em;
+
+  position: relative;
+
+  font-family: var(--font);
+  font-size: rem(13px);
+  letter-spacing: 0.066em;
+
+  backdrop-filter: blur(10px);
+  color: var(--color);
+
+  padding: var(--space);
+  background: var(--background);
+  border-radius: rem(3px);
+}

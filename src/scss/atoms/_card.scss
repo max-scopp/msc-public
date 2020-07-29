@@ -1,0 +1,33 @@
+%card-core {
+  --background: var(--mode);
+  --color: var(--text-on-light);
+  --border: #{rgba($c-black, 0.06)}; // it's the little things in life, you know.
+  --font: var(--roboto);
+  --space: 20px;
+
+  position: relative;
+  font-family: var(--font);
+  padding: var(--space);
+
+  border: rem(1px) solid var(--border);
+  background: var(--background);
+  color: var(--color);
+}
+
+%card-base {
+  --shadow: #{$bsh-normal};
+  --border: transparent;
+
+  @extend %card-core;
+
+  box-shadow: var(--shadow);
+  border-radius: rem(10px);
+}
+
+%card-title {
+  --font: var(--sans);
+  font-family: var(--font);
+
+  font-size: rem(19px);
+  line-height: 1;
+}

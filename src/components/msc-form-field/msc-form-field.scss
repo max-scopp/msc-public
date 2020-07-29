@@ -1,0 +1,22 @@
+@import "atoms/input";
+
+:host {
+  display: grid;
+
+  grid-template-rows: minmax(24px, auto) auto minmax(24px, auto);
+  align-items: center;
+
+  grid-template-areas:
+    "label"
+    "slot"
+    "state";
+
+  > .label {
+    @extend %label-base;
+  }
+
+  > .state {
+    @extend %label-base;
+    grid-area: state;
+  }
+}

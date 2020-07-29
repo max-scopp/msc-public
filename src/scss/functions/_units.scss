@@ -1,0 +1,23 @@
+@function pxToFloat($value, $root: $fz-root) {
+  @if (unitless($value) == false and unitless($root) == false) {
+    @return $value / $root;
+  } @else {
+    @error "pxToFloat: $root (#{$root}) and $value (#{$value}) must have a unit";
+  }
+}
+
+@function em($px-in, $em-root) {
+  $result: pxToFloat($px-in, $em-root);
+  @if (unitless($result) == false) {
+    @error "em() didn't really work, because an arithmetic calculation with units must return a pure number.";
+  }
+  @return $result + em;
+}
+
+@function rem($px-in) {
+  $result: pxToFloat($px-in);
+  @if (unitless($result) == false) {
+    @error "rem() didn't really work, because an arithmetic calculation with units must return a pure number.";
+  }
+  @return $result + rem;
+}

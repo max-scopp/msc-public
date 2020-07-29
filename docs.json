@@ -1,0 +1,2250 @@
+{
+  "timestamp": "2020-07-29T12:48:40",
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "1.17.0",
+    "typescriptVersion": "3.9.7"
+  },
+  "components": [
+    {
+      "filePath": "./src/components/msc-badge/msc-badge.tsx",
+      "encapsulation": "shadow",
+      "tag": "msc-badge",
+      "readme": "# msc-badge\n\n\n",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "block",
+          "type": "any",
+          "mutable": false,
+          "attr": "block",
+          "reflectToAttr": true,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "any"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "color",
+          "type": "string",
+          "mutable": false,
+          "attr": "color",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "listeners": [],
+      "styles": [],
+      "slots": [],
+      "parts": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "./src/components/msc-button/msc-button.tsx",
+      "encapsulation": "scoped",
+      "tag": "msc-button",
+      "readme": "# msc-button\n\n\n",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "disabled",
+          "reflectToAttr": true,
+          "docs": "Wether or not the component is actually disabled.",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "href",
+          "type": "string",
+          "mutable": false,
+          "attr": "to",
+          "reflectToAttr": true,
+          "docs": "Optional, if provided, the button contains an a11y-anchor inside.",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "state",
+          "type": "\"bad\" | \"good\" | \"info\" | \"normal\" | \"warn\"",
+          "mutable": false,
+          "attr": "state",
+          "reflectToAttr": true,
+          "docs": "What state the button has.",
+          "docsTags": [],
+          "values": [
+            {
+              "value": "bad",
+              "type": "string"
+            },
+            {
+              "value": "good",
+              "type": "string"
+            },
+            {
+              "value": "info",
+              "type": "string"
+            },
+            {
+              "value": "normal",
+              "type": "string"
+            },
+            {
+              "value": "warn",
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "target",
+          "type": "string",
+          "mutable": false,
+          "attr": "target",
+          "reflectToAttr": false,
+          "docs": "If \"to\" is provided, should the link have a target be set?",
+          "docsTags": [
+            {
+              "text": "to",
+              "name": "see"
+            }
+          ],
+          "default": "'_self'",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "theme",
+          "type": "\"big\" | \"default\" | \"minimal\" | \"primary\" | \"small\"",
+          "mutable": false,
+          "attr": "theme",
+          "reflectToAttr": true,
+          "docs": "What kind of default-provided theme shall be applied.",
+          "docsTags": [],
+          "values": [
+            {
+              "value": "big",
+              "type": "string"
+            },
+            {
+              "value": "default",
+              "type": "string"
+            },
+            {
+              "value": "minimal",
+              "type": "string"
+            },
+            {
+              "value": "primary",
+              "type": "string"
+            },
+            {
+              "value": "small",
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "type",
+          "type": "string",
+          "mutable": false,
+          "attr": "type",
+          "reflectToAttr": false,
+          "docs": "What kind of button this one is.",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "listeners": [],
+      "styles": [],
+      "slots": [],
+      "parts": [],
+      "dependents": [
+        "msc-button-group",
+        "msc-modal"
+      ],
+      "dependencies": [],
+      "dependencyGraph": {
+        "msc-button-group": [
+          "msc-button"
+        ],
+        "msc-modal": [
+          "msc-button"
+        ]
+      }
+    },
+    {
+      "filePath": "./src/components/msc-button-group/msc-button-group.tsx",
+      "encapsulation": "shadow",
+      "tag": "msc-button-group",
+      "readme": "# msc-button-group\n\n\n",
+      "docs": "Collects buttons. Horizontally. Supports `--gap`.\nIf `autohide` is true, any items which to not fit will be\nrendered as <msc-item /> within an Menu.",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "autohideItems",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "autohide",
+          "reflectToAttr": false,
+          "docs": "Hide's the last X items that don't fit to the parent container.\nitems will be re-rendered as <msc-item />",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "listeners": [],
+      "styles": [],
+      "slots": [],
+      "parts": [],
+      "dependents": [
+        "msc-modal"
+      ],
+      "dependencies": [
+        "msc-item",
+        "msc-button",
+        "msc-icon",
+        "msc-menu"
+      ],
+      "dependencyGraph": {
+        "msc-button-group": [
+          "msc-item",
+          "msc-button",
+          "msc-icon",
+          "msc-menu"
+        ],
+        "msc-menu": [
+          "msc-list"
+        ],
+        "msc-modal": [
+          "msc-button-group"
+        ]
+      }
+    },
+    {
+      "filePath": "./src/components/msc-card/msc-card.tsx",
+      "encapsulation": "scoped",
+      "tag": "msc-card",
+      "readme": "# msc-card\n\n\n",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "href",
+          "type": "string",
+          "mutable": false,
+          "attr": "to",
+          "reflectToAttr": true,
+          "docs": "Link where to go to when click",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "target",
+          "type": "string",
+          "mutable": false,
+          "attr": "target",
+          "reflectToAttr": false,
+          "docs": "if an href (usually called \"to\" as attribute/prop) is provided,\nshould there be a specific target type applied?",
+          "docsTags": [],
+          "default": "'_self'",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "listeners": [],
+      "styles": [],
+      "slots": [],
+      "parts": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "./src/components/msc-collapsible/msc-collapsible.tsx",
+      "encapsulation": "none",
+      "tag": "msc-collapsible",
+      "readme": "# msc-collapsible\n\n\n",
+      "docs": "TODO: Allow Animations; set duration via css-var",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "isVisible",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "open",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "default": "true",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [
+        {
+          "name": "hide",
+          "returns": {
+            "type": "Promise<void>",
+            "docs": ""
+          },
+          "signature": "hide() => Promise<void>",
+          "parameters": [],
+          "docs": "",
+          "docsTags": []
+        },
+        {
+          "name": "show",
+          "returns": {
+            "type": "Promise<void>",
+            "docs": ""
+          },
+          "signature": "show() => Promise<void>",
+          "parameters": [],
+          "docs": "",
+          "docsTags": []
+        },
+        {
+          "name": "toggle",
+          "returns": {
+            "type": "Promise<void>",
+            "docs": ""
+          },
+          "signature": "toggle(newState?: boolean) => Promise<void>",
+          "parameters": [],
+          "docs": "",
+          "docsTags": []
+        }
+      ],
+      "events": [],
+      "listeners": [],
+      "styles": [],
+      "slots": [],
+      "parts": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "./src/components/msc-content/msc-content.tsx",
+      "encapsulation": "shadow",
+      "tag": "msc-content",
+      "readme": "# msc-content\n\n\n",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "alignX",
+          "type": "string",
+          "mutable": false,
+          "attr": "align-x",
+          "reflectToAttr": false,
+          "docs": "Overwrites the placement of content (NOT items!) on the horizontal axis\nSee flexbox values\nMay swap with horizontal alignment for correct behaviour",
+          "docsTags": [
+            {
+              "text": "trackX",
+              "name": "see"
+            },
+            {
+              "text": "trackY",
+              "name": "see"
+            }
+          ],
+          "default": "'stretch'",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "alignY",
+          "type": "string",
+          "mutable": false,
+          "attr": "align-y",
+          "reflectToAttr": false,
+          "docs": "Overwrite placement of content (NOT items!) on the vertical axis\nSee flexbox values\nMay swap with horizontal alignment for correct behaviour",
+          "docsTags": [
+            {
+              "text": "trackX",
+              "name": "see"
+            },
+            {
+              "text": "trackY",
+              "name": "see"
+            }
+          ],
+          "default": "'flex-start'",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "center",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "center",
+          "reflectToAttr": false,
+          "docs": "Centers the content of this container (NOT items!) on both axis.",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "contentScroll",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "content-scroll",
+          "reflectToAttr": false,
+          "docs": "Enables purposefully scrolling for the content of this tag.",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "trackX",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "track-x",
+          "reflectToAttr": false,
+          "docs": "Changes the placement direction of this container.\nSee flexbox specs. Applies \"weird behaviour\" fixes of flexbox.",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "trackY",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "track-y",
+          "reflectToAttr": false,
+          "docs": "Changes the placement direction of this container.\nSee flexbox specs. Applies \"weird behaviour\" fixes of flexbox.",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "listeners": [],
+      "styles": [],
+      "slots": [],
+      "parts": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "./src/components/msc-define/msc-define.tsx",
+      "encapsulation": "none",
+      "tag": "msc-define",
+      "readme": "# msc-define\n\n\n",
+      "docs": "Utilizes DataProvider Service to define the children asap the component can be initialized.",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "group",
+          "type": "string",
+          "mutable": false,
+          "attr": "group",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "mutable": false,
+          "attr": "name",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "listeners": [],
+      "styles": [],
+      "slots": [],
+      "parts": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "./src/components/msc-display-filter/msc-display-filter.tsx",
+      "encapsulation": "none",
+      "tag": "msc-display-filter",
+      "readme": "# msc-display-filter\n\n\n",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "for",
+          "type": "HTMLElement | string",
+          "mutable": false,
+          "attr": "for",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "HTMLElement"
+            },
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "listeners": [
+        {
+          "event": "change",
+          "capture": false,
+          "passive": false
+        },
+        {
+          "event": "userInput",
+          "capture": false,
+          "passive": false
+        }
+      ],
+      "styles": [],
+      "slots": [],
+      "parts": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "./src/components/msc-form-field/msc-form-field.tsx",
+      "encapsulation": "shadow",
+      "tag": "msc-form-field",
+      "readme": "# msc-form-field\n\n\n",
+      "docs": "TODO: Implement",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "label",
+          "type": "string",
+          "mutable": false,
+          "attr": "label",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "listeners": [],
+      "styles": [],
+      "slots": [],
+      "parts": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "./src/components/msc-grid/msc-grid.tsx",
+      "encapsulation": "shadow",
+      "tag": "msc-grid",
+      "readme": "# msc-grid\n\n\n",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "base",
+          "type": "number | string",
+          "mutable": false,
+          "attr": "base",
+          "reflectToAttr": false,
+          "docs": "The minimum width of an item of the grid",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "centerContent",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "center-content",
+          "reflectToAttr": false,
+          "docs": "Center container of all item-containers?",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "centerItems",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "center-items",
+          "reflectToAttr": false,
+          "docs": "Center grid items in their item-container?",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "gap",
+          "type": "number | string",
+          "mutable": false,
+          "attr": "gap",
+          "reflectToAttr": false,
+          "docs": "The minimum width of an item of the grid",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "squared",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "center-items",
+          "reflectToAttr": false,
+          "docs": "Should every cell's height equal to it's --base width?",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "template",
+          "type": "string",
+          "mutable": false,
+          "attr": "template",
+          "reflectToAttr": false,
+          "docs": "Define's the grid-template",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "listeners": [],
+      "styles": [],
+      "slots": [],
+      "parts": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "./src/components/msc-icon/msc-icon.tsx",
+      "encapsulation": "none",
+      "tag": "msc-icon",
+      "readme": "# msc-icon\n\n\n",
+      "docs": "TODO: This class is still buggy for subsequent updates.",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "name",
+          "type": "string",
+          "mutable": false,
+          "attr": "name",
+          "reflectToAttr": false,
+          "docs": "The iconName to resolve. This is dependant on how you declared your own\nIconSet.",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "set",
+          "type": "string",
+          "mutable": false,
+          "attr": "set",
+          "reflectToAttr": false,
+          "docs": "The IconSet to pick the icon-name from.\nIf not provied, the `defaultIconSet` is used from ApplicationService.",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "listeners": [],
+      "styles": [],
+      "slots": [],
+      "parts": [],
+      "dependents": [
+        "msc-button-group",
+        "msc-input",
+        "msc-modal"
+      ],
+      "dependencies": [],
+      "dependencyGraph": {
+        "msc-button-group": [
+          "msc-icon"
+        ],
+        "msc-input": [
+          "msc-icon"
+        ],
+        "msc-modal": [
+          "msc-icon"
+        ]
+      }
+    },
+    {
+      "filePath": "./src/components/msc-input/msc-input.tsx",
+      "encapsulation": "none",
+      "tag": "msc-input",
+      "readme": "# msc-input\n\n\n",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "autocomplete",
+          "type": "\"false\" | \"true\" | boolean",
+          "mutable": false,
+          "attr": "autocomplete",
+          "reflectToAttr": false,
+          "docs": "Should this input field autocomplete?\nIgnored for type=\"radio\" and type=\"checkbox\"",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "value": "false",
+              "type": "string"
+            },
+            {
+              "value": "true",
+              "type": "string"
+            },
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "disabled",
+          "type": "\"false\" | \"true\" | boolean",
+          "mutable": false,
+          "attr": "disabled",
+          "reflectToAttr": false,
+          "docs": "Is your input disabled?",
+          "docsTags": [],
+          "values": [
+            {
+              "value": "false",
+              "type": "string"
+            },
+            {
+              "value": "true",
+              "type": "string"
+            },
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "mutable": false,
+          "attr": "name",
+          "reflectToAttr": false,
+          "docs": "Under what name should the value be stored inside the form?",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "placeholder",
+          "type": "string",
+          "mutable": false,
+          "attr": "placeholder",
+          "reflectToAttr": false,
+          "docs": "The value to display when there is no value.",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "required",
+          "type": "\"false\" | \"true\" | boolean",
+          "mutable": false,
+          "attr": "required",
+          "reflectToAttr": false,
+          "docs": "Is your input required?",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "value": "false",
+              "type": "string"
+            },
+            {
+              "value": "true",
+              "type": "string"
+            },
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "type",
+          "type": "\"checkbox\" | \"color\" | \"date\" | \"datetime\" | \"email\" | \"month\" | \"number\" | \"password\" | \"radio\" | \"search\" | \"tel\" | \"text\" | \"textarea\" | \"url\" | \"week\"",
+          "mutable": false,
+          "attr": "type",
+          "reflectToAttr": false,
+          "docs": "The type of input you need.",
+          "docsTags": [],
+          "default": "BaseInputTypes.Text",
+          "values": [
+            {
+              "value": "checkbox",
+              "type": "string"
+            },
+            {
+              "value": "color",
+              "type": "string"
+            },
+            {
+              "value": "date",
+              "type": "string"
+            },
+            {
+              "value": "datetime",
+              "type": "string"
+            },
+            {
+              "value": "email",
+              "type": "string"
+            },
+            {
+              "value": "month",
+              "type": "string"
+            },
+            {
+              "value": "number",
+              "type": "string"
+            },
+            {
+              "value": "password",
+              "type": "string"
+            },
+            {
+              "value": "radio",
+              "type": "string"
+            },
+            {
+              "value": "search",
+              "type": "string"
+            },
+            {
+              "value": "tel",
+              "type": "string"
+            },
+            {
+              "value": "text",
+              "type": "string"
+            },
+            {
+              "value": "textarea",
+              "type": "string"
+            },
+            {
+              "value": "url",
+              "type": "string"
+            },
+            {
+              "value": "week",
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "value",
+          "type": "any",
+          "mutable": false,
+          "attr": "value",
+          "reflectToAttr": false,
+          "docs": "The value the component has/holds.",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "any"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [],
+      "events": [
+        {
+          "event": "userInput",
+          "detail": "any",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "CustomEvent that dispatches when the content changes.",
+          "docsTags": []
+        }
+      ],
+      "listeners": [],
+      "styles": [],
+      "slots": [],
+      "parts": [],
+      "dependents": [],
+      "dependencies": [
+        "msc-icon"
+      ],
+      "dependencyGraph": {
+        "msc-input": [
+          "msc-icon"
+        ]
+      }
+    },
+    {
+      "filePath": "./src/components/msc-item/msc-item.tsx",
+      "encapsulation": "shadow",
+      "tag": "msc-item",
+      "readme": "# msc-item\n\n\n",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "active",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "active",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "href",
+          "type": "string",
+          "mutable": false,
+          "attr": "to",
+          "reflectToAttr": false,
+          "docs": "An attribute/prop that is usually exposed as \"to\" which intern will\nopen the provided link when activated.\nOr whatever the criteria is.\n!IMPORTANT! To make your life easier, be sure to set the prop to \"reflect\" the current value!",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "interactive",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "interactive",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "target",
+          "type": "string",
+          "mutable": false,
+          "attr": "target",
+          "reflectToAttr": false,
+          "docs": "if an href (usually called \"to\" as attribute/prop) is provided,\nshould there be a specific target type applied?",
+          "docsTags": [],
+          "default": "'_self'",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "listeners": [],
+      "styles": [],
+      "slots": [],
+      "parts": [],
+      "dependents": [
+        "msc-button-group"
+      ],
+      "dependencies": [],
+      "dependencyGraph": {
+        "msc-button-group": [
+          "msc-item"
+        ]
+      }
+    },
+    {
+      "filePath": "./src/components/msc-list/msc-list.tsx",
+      "encapsulation": "none",
+      "tag": "msc-list",
+      "readme": "# msc-list\n\n\n",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "direction",
+          "type": "\"horizontal\" | \"vertical\"",
+          "mutable": false,
+          "attr": "direction",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "value": "horizontal",
+              "type": "string"
+            },
+            {
+              "value": "vertical",
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "gap",
+          "type": "number | string",
+          "mutable": false,
+          "attr": "gap",
+          "reflectToAttr": true,
+          "docs": "",
+          "docsTags": [],
+          "default": "3",
+          "values": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "reverse",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "reverse",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "listeners": [],
+      "styles": [],
+      "slots": [],
+      "parts": [],
+      "dependents": [
+        "msc-menu"
+      ],
+      "dependencies": [],
+      "dependencyGraph": {
+        "msc-menu": [
+          "msc-list"
+        ]
+      }
+    },
+    {
+      "filePath": "./src/components/msc-loader/msc-loader.tsx",
+      "encapsulation": "shadow",
+      "tag": "msc-loader",
+      "readme": "# msc-loader\n\n\n",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [],
+      "methods": [],
+      "events": [],
+      "listeners": [],
+      "styles": [],
+      "slots": [],
+      "parts": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "./src/components/msc-menu/msc-menu.tsx",
+      "encapsulation": "shadow",
+      "tag": "msc-menu",
+      "readme": "# msc-menu\n\n\n",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "open",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "open",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "default": "true",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "positionTo",
+          "type": "HTMLElement | string",
+          "mutable": false,
+          "attr": "position-to",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "HTMLElement"
+            },
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [],
+      "events": [
+        {
+          "event": "close",
+          "detail": "any",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "",
+          "docsTags": []
+        }
+      ],
+      "listeners": [],
+      "styles": [],
+      "slots": [],
+      "parts": [],
+      "dependents": [
+        "msc-button-group"
+      ],
+      "dependencies": [
+        "msc-list"
+      ],
+      "dependencyGraph": {
+        "msc-menu": [
+          "msc-list"
+        ],
+        "msc-button-group": [
+          "msc-menu"
+        ]
+      }
+    },
+    {
+      "filePath": "./src/components/msc-modal/msc-modal.tsx",
+      "encapsulation": "none",
+      "tag": "msc-modal",
+      "readme": "# msc-modal\n\n\n",
+      "docs": "If you provide custom actions and those need to onAffirm or onReject, don't\nforget to add data-positive or data-negative!",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "closingX",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "closing-x",
+          "reflectToAttr": false,
+          "docs": "Show's an closing-X at the top right.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "displayMessage",
+          "type": "string | string[]",
+          "mutable": false,
+          "attr": "message",
+          "reflectToAttr": false,
+          "docs": "The important message you need to devliever to your user.\nIf an array is supplied, each item will be wrapped in an paragraph.",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "string[]"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "displayNegativeText",
+          "type": "string",
+          "mutable": false,
+          "attr": "text-negative",
+          "reflectToAttr": false,
+          "docs": "If provided, this value is used to render the default, negative button.\nOnly needed to overwrite the text, you can also overwrite the whole button\nif you define \"data-negative\" as attribute inside your slot named action.",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "displayPositiveText",
+          "type": "string",
+          "mutable": false,
+          "attr": "text-positive",
+          "reflectToAttr": false,
+          "docs": "If provided, this value is used to render the default, positive button.\nOnly needed to overwrite the text, you can also overwrite the whole button\nif you define \"data-positive\" as attribute inside your slot named action.",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "displayTitle",
+          "type": "string",
+          "mutable": false,
+          "attr": "title",
+          "reflectToAttr": false,
+          "docs": "The title to display at the top. Supply a falsy value to disclose.",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "global",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "global",
+          "reflectToAttr": false,
+          "docs": "Don't position using \"absolute\".\nIgnore parent, use position \"fixed\" when true.",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "isVisible",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "is-visible",
+          "reflectToAttr": false,
+          "docs": "*** DO NOT SET THIS VALUE BY HAND; THIS IS READONLY/INITIAL ASSIGNMENT ***\nIf you're using a framework, you can set it. Otherwise, no.\nCall myModal.toggle() in html. Designed for JSX assignment.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "omittedActions",
+          "type": "string | string[]",
+          "mutable": false,
+          "attr": "omit",
+          "reflectToAttr": false,
+          "docs": "Not only can you overwrite the texts and buttons that are present by default,\nusing this prop you are also be able to exclude certain actions.\nE.g. Dialogs.alert() will omit the negative action.",
+          "docsTags": [],
+          "default": "[]",
+          "values": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "string[]"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "onaffirm",
+          "type": "(...anyArgs: any[]) => any",
+          "mutable": false,
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "default": "noop",
+          "values": [
+            {
+              "type": "(...anyArgs: any[]) => any"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "onreject",
+          "type": "(...anyArgs: any[]) => any",
+          "mutable": false,
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "default": "noop",
+          "values": [
+            {
+              "type": "(...anyArgs: any[]) => any"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "role",
+          "type": "\"alert\" | \"alertdialog\" | \"dialog\"",
+          "mutable": false,
+          "attr": "role",
+          "reflectToAttr": true,
+          "docs": "Defines the Modal-Role. Is it a dismissable alert or dialog?",
+          "docsTags": [],
+          "default": "'dialog'",
+          "values": [
+            {
+              "value": "alert",
+              "type": "string"
+            },
+            {
+              "value": "alertdialog",
+              "type": "string"
+            },
+            {
+              "value": "dialog",
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [
+        {
+          "name": "close",
+          "returns": {
+            "type": "Promise<void>",
+            "docs": ""
+          },
+          "signature": "close() => Promise<void>",
+          "parameters": [],
+          "docs": "Closes the modal, even if it's already closed.",
+          "docsTags": []
+        },
+        {
+          "name": "open",
+          "returns": {
+            "type": "Promise<void>",
+            "docs": ""
+          },
+          "signature": "open() => Promise<void>",
+          "parameters": [],
+          "docs": "Opens the modal, even if it's already open.",
+          "docsTags": []
+        },
+        {
+          "name": "toggle",
+          "returns": {
+            "type": "Promise<void>",
+            "docs": ""
+          },
+          "signature": "toggle(newState?: boolean) => Promise<void>",
+          "parameters": [],
+          "docs": "Invert's the current visibillity state.\nBut you can also define a specific visibillity state as argument,\nbut might wanna try `show()` or `close()` first.",
+          "docsTags": [
+            {
+              "name": "param",
+              "text": "newState The new forcefully defined state"
+            }
+          ]
+        }
+      ],
+      "events": [
+        {
+          "event": "affirm",
+          "detail": "any",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "Event and static prop to define what happens when the user\nwants to proceed.\nThis may be the \"apply\", or \"ok\" button, it's usually also theme=\"primary\"\nYou can listen on this actions usinmg \"affirm\".",
+          "docsTags": []
+        },
+        {
+          "event": "modal-toggled",
+          "detail": "any",
+          "bubbles": true,
+          "cancelable": false,
+          "composed": true,
+          "docs": "Custom event that gets triggered whenever this instance changes it's `isVisible`\nproperty.\nAccess the value using `detail`.\nAccess the modal using `target`.",
+          "docsTags": []
+        },
+        {
+          "event": "reject",
+          "detail": "any",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "Event and static prop to define what happens when the user does NOT\nwant to proceed.\nThis may be the \"cancel\", or \"reset\" button, it's usually is rendered with default styles.\nYou can listen on this actions usinmg \"reject\".",
+          "docsTags": []
+        }
+      ],
+      "listeners": [],
+      "styles": [],
+      "slots": [],
+      "parts": [],
+      "dependents": [],
+      "dependencies": [
+        "msc-button",
+        "msc-icon",
+        "msc-button-group"
+      ],
+      "dependencyGraph": {
+        "msc-modal": [
+          "msc-button",
+          "msc-icon",
+          "msc-button-group"
+        ],
+        "msc-button-group": [
+          "msc-item",
+          "msc-button",
+          "msc-icon",
+          "msc-menu"
+        ],
+        "msc-menu": [
+          "msc-list"
+        ]
+      }
+    },
+    {
+      "filePath": "./src/components/msc-progress-indicator/msc-progress-indicator.tsx",
+      "encapsulation": "none",
+      "tag": "msc-progress-indicator",
+      "readme": "# msc-progress-indicator\n\n\n",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [],
+      "methods": [
+        {
+          "name": "ongoing",
+          "returns": {
+            "type": "Promise<void>",
+            "docs": ""
+          },
+          "signature": "ongoing(requests: Request[], aborted?: Error | Response) => Promise<void>",
+          "parameters": [],
+          "docs": "Ongoing requests reported lazily by ApiService",
+          "docsTags": []
+        }
+      ],
+      "events": [],
+      "listeners": [],
+      "styles": [],
+      "slots": [],
+      "parts": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "./src/components/msc-request-notifier/msc-request-notifier.tsx",
+      "encapsulation": "none",
+      "tag": "msc-request-notifier",
+      "readme": "# msc-request-notifier\n\n\n",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [],
+      "methods": [],
+      "events": [],
+      "listeners": [],
+      "styles": [],
+      "slots": [],
+      "parts": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "./src/components/msc-sidebar/msc-sidebar.tsx",
+      "encapsulation": "shadow",
+      "tag": "msc-sidebar",
+      "readme": "ce# msc-sidebar\n\n\n",
+      "docs": "ce# msc-sidebar",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "autoShow",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "auto-show",
+          "reflectToAttr": false,
+          "docs": "Should the Sidebar expand when you're near it?",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "fixed",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "fixed",
+          "reflectToAttr": true,
+          "docs": "If true, styling applies position: fixed instead of position: absolute",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "keepOpen",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "open",
+          "reflectToAttr": false,
+          "docs": "Should the Sidebar always be open?",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "overlay",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "overlay",
+          "reflectToAttr": true,
+          "docs": "Wether or not the sidebar should take up space in the document.\nIf true, full content is exposed on hovering/tap.",
+          "docsTags": [],
+          "default": "true",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "side",
+          "type": "\"left\" | \"right\"",
+          "mutable": false,
+          "attr": "side",
+          "reflectToAttr": true,
+          "docs": "If true, styling applies position: fixed instead of position: absolute",
+          "docsTags": [],
+          "default": "SidebarPositions.Default",
+          "values": [
+            {
+              "value": "left",
+              "type": "string"
+            },
+            {
+              "value": "right",
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "single",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "single",
+          "reflectToAttr": true,
+          "docs": "Controls wether or not only one item can be expanded.",
+          "docsTags": [],
+          "default": "true",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [
+        {
+          "name": "hide",
+          "returns": {
+            "type": "Promise<void>",
+            "docs": ""
+          },
+          "signature": "hide() => Promise<void>",
+          "parameters": [],
+          "docs": "Hides the Sidebar.",
+          "docsTags": []
+        },
+        {
+          "name": "show",
+          "returns": {
+            "type": "Promise<void>",
+            "docs": ""
+          },
+          "signature": "show() => Promise<void>",
+          "parameters": [],
+          "docs": "Shows the Sidebar.",
+          "docsTags": []
+        },
+        {
+          "name": "toggle",
+          "returns": {
+            "type": "Promise<void>",
+            "docs": ""
+          },
+          "signature": "toggle(newState?: boolean) => Promise<void>",
+          "parameters": [],
+          "docs": "Inverts current state or forces a specific state",
+          "docsTags": [
+            {
+              "name": "param",
+              "text": "newState"
+            }
+          ]
+        }
+      ],
+      "events": [],
+      "listeners": [
+        {
+          "event": "focus",
+          "capture": true,
+          "passive": false
+        }
+      ],
+      "styles": [],
+      "slots": [],
+      "parts": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "./src/components/msc-title/msc-title.tsx",
+      "encapsulation": "scoped",
+      "tag": "msc-title",
+      "readme": "# msc-title\n\n\n",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "subline",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "subline",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "listeners": [],
+      "styles": [],
+      "slots": [],
+      "parts": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "./src/components/msc-toast/msc-toast.tsx",
+      "encapsulation": "none",
+      "tag": "msc-toast",
+      "readme": "# msc-toast\n\n\n",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "dismissable",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "dismissable",
+          "reflectToAttr": false,
+          "docs": "If true, toast will be gone when clicked.",
+          "docsTags": [],
+          "default": "true",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "indicator",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "indicator",
+          "reflectToAttr": false,
+          "docs": "If true, only the most important things are rendered to make the toast work.\nPure extendabillity for your!",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "message",
+          "type": "string",
+          "mutable": false,
+          "attr": "message",
+          "reflectToAttr": false,
+          "docs": "The message to show in the Toast.",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "messageTitle",
+          "type": "string",
+          "mutable": false,
+          "attr": "message-title",
+          "reflectToAttr": false,
+          "docs": "A small string that's rendered <**bold** />",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "state",
+          "type": "\"danger\" | \"info\" | \"normal\" | \"success\" | \"warning\"",
+          "mutable": false,
+          "attr": "state",
+          "reflectToAttr": false,
+          "docs": "Visual state how the tosat looks",
+          "docsTags": [],
+          "default": "ToastStateTypes.Normal",
+          "values": [
+            {
+              "value": "danger",
+              "type": "string"
+            },
+            {
+              "value": "info",
+              "type": "string"
+            },
+            {
+              "value": "normal",
+              "type": "string"
+            },
+            {
+              "value": "success",
+              "type": "string"
+            },
+            {
+              "value": "warning",
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "timeout",
+          "type": "boolean | number",
+          "mutable": false,
+          "attr": "timeout",
+          "reflectToAttr": false,
+          "docs": "How long the toast shall be visible. Use a falsy value for no timeout.",
+          "docsTags": [],
+          "default": "5e3",
+          "values": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [
+        {
+          "name": "dismiss",
+          "returns": {
+            "type": "Promise<void>",
+            "docs": ""
+          },
+          "signature": "dismiss() => Promise<void>",
+          "parameters": [],
+          "docs": "Removes the toast",
+          "docsTags": []
+        }
+      ],
+      "events": [
+        {
+          "event": "close",
+          "detail": "any",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "CLose event when dismissed",
+          "docsTags": []
+        }
+      ],
+      "listeners": [],
+      "styles": [],
+      "slots": [],
+      "parts": [],
+      "dependents": [],
+      "dependencies": [
+        "msc-tooltip"
+      ],
+      "dependencyGraph": {
+        "msc-toast": [
+          "msc-tooltip"
+        ]
+      }
+    },
+    {
+      "filePath": "./src/components/msc-toast-container/msc-toast-container.tsx",
+      "encapsulation": "none",
+      "tag": "msc-toast-container",
+      "readme": "# msc-toast-container\n\n\n",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [],
+      "methods": [
+        {
+          "name": "addToast",
+          "returns": {
+            "type": "Promise<void>",
+            "docs": ""
+          },
+          "signature": "addToast(toast: HTMLMscToastElement) => Promise<void>",
+          "parameters": [],
+          "docs": "Adds an existing toast node",
+          "docsTags": []
+        },
+        {
+          "name": "removeToast",
+          "returns": {
+            "type": "Promise<void>",
+            "docs": ""
+          },
+          "signature": "removeToast(toast: HTMLMscToastElement) => Promise<void>",
+          "parameters": [],
+          "docs": "Removes an existing toast node.",
+          "docsTags": []
+        }
+      ],
+      "events": [],
+      "listeners": [],
+      "styles": [],
+      "slots": [],
+      "parts": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "./src/components/msc-tooltip/msc-tooltip.tsx",
+      "encapsulation": "none",
+      "tag": "msc-tooltip",
+      "readme": "# msc-tooltip\n\nThe \"tooltip\" is an essential component that helps you to define a more descriptive message for another element.\n\nIt also helps you to describe icons and any other component(s) that aren't descriptive enough by default for disabled users.\n\nATTENTION: This component will always add itself as last element to the viewport.\nThis is to ensure that the tooltip is always visible in any case, additionally, it ensures that nested - scrollable views, do not conflict in the global viewport offset.\n\nJust keep in mind that you declare the component context-based, but the component itself is rendered globally, while maintaining it's created context.\n\nYou can also overwrite the target-context by providing a \"for\" selector.\n",
+      "docs": "The \"tooltip\" is an essential component that helps you to define a more descriptive message for another element.\n\nIt also helps you to describe icons and any other component(s) that aren't descriptive enough by default for disabled users.\n\nATTENTION: This component will always add itself as last element to the viewport.\nThis is to ensure that the tooltip is always visible in any case, additionally, it ensures that nested - scrollable views, do not conflict in the global viewport offset.\n\nJust keep in mind that you declare the component context-based, but the component itself is rendered globally, while maintaining it's created context.\n\nYou can also overwrite the target-context by providing a \"for\" selector.",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "for",
+          "type": "string",
+          "mutable": false,
+          "attr": "for",
+          "reflectToAttr": false,
+          "docs": "Idenficator (id) for targeted element. Fallback to <slot/> if not provided.\nTooltip will be placed relative to the found element.\nIf the element is not found, the component will break (but a developer notice will be logged).",
+          "docsTags": [],
+          "default": "null",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "global",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "global",
+          "reflectToAttr": false,
+          "docs": "All tooltips are now globally positioned by default.\nIt's just better.",
+          "docsTags": [
+            {
+              "name": "deprecated"
+            }
+          ],
+          "deprecation": "",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "label",
+          "type": "string",
+          "mutable": false,
+          "attr": "label",
+          "reflectToAttr": false,
+          "docs": "What should the displayed within the tooltip?",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "position",
+          "type": "\"bottom\" | \"left\" | \"right\" | \"top\"",
+          "mutable": false,
+          "attr": "position",
+          "reflectToAttr": false,
+          "docs": "Where the actual tooltip needs to be positioned.\nIgnored when there is no space.",
+          "docsTags": [],
+          "default": "TooltipPositions.Top",
+          "values": [
+            {
+              "value": "bottom",
+              "type": "string"
+            },
+            {
+              "value": "left",
+              "type": "string"
+            },
+            {
+              "value": "right",
+              "type": "string"
+            },
+            {
+              "value": "top",
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "listeners": [],
+      "styles": [],
+      "slots": [],
+      "parts": [],
+      "dependents": [
+        "msc-toast"
+      ],
+      "dependencies": [],
+      "dependencyGraph": {
+        "msc-toast": [
+          "msc-tooltip"
+        ]
+      }
+    }
+  ]
+}

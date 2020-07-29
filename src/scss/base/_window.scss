@@ -1,0 +1,55 @@
+:root {
+  --red: #{$fc-red};
+  --blue: #{$fc-blue};
+  --cyan: #{$fc-cyan};
+  --yellow: #{$fc-yellow};
+  --green: #{$fc-green};
+
+  --cmp-border-darker: #{$c-shade-70};
+  --cmp-borders: #{$c-shade-86};
+
+  --black-translucent: #{$c-black-26};
+  --black-translucent-heavy: #{$c-black-80};
+
+  --white-translucent: #{$c-white-26};
+  --white-translucent-heavy: #{$c-white-80};
+
+  // WebApp defaults
+
+  --cmp-disabled: #{$c-shade-42};
+  --cmp-disabled-text: #{$c-shade-22};
+
+  --text-on-light: #{$c-text-on-light-background};
+  --text-on-dark: #{$c-text-on-dark-background};
+
+  --primary: #{$c-primary};
+  --primary-alt: #{$c-primary-alt};
+
+  --alternative: #{$c-alternative};
+  --alternative-alt: #{$c-alternative-alt};
+
+  --bg-light: #{$surface-light};
+  --bg-dark: #{$surface-dark};
+}
+
+html {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+
+  overflow: overlay;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--white-translucent);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+  border: 1px solid var(--black-translucent);
+  border-radius: 8px;
+}

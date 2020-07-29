@@ -1,0 +1,104 @@
+$btn-fz-base: 14px !default;
+
+%button-base {
+  --background: var(--cmp-border-darker);
+  --border: transparent;
+  --color: var(--text-on-light);
+  --font: var(--sans);
+
+  cursor: pointer;
+  user-select: none;
+
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  padding: em(8px, $btn-fz-base) em(10px, $btn-fz-base);
+
+  font-size: rem($btn-fz-base);
+  font-family: var(--font);
+  font-weight: 500;
+
+  line-height: 1.25;
+  white-space: nowrap;
+
+  background: var(--background);
+  border: 0 solid var(--border);
+
+  outline: 4px auto var(--outline);
+  outline-offset: -4px;
+
+  box-shadow: $bsh-paper;
+  border-radius: rem(8px);
+
+  &,
+  &:hover,
+  &:focus,
+  &:active {
+    color: var(--color);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: inherit; // prevents funky flashes
+    pointer-events: none;
+
+    opacity: 0;
+
+    mix-blend-mode: overlay;
+    filter: contrast(1.7) saturate(2);
+
+    transition: all $cb-authentic 180ms;
+  }
+
+  &:hover,
+  &:focus-within {
+    &::after {
+      background: white;
+      opacity: 0.18;
+    }
+  }
+
+  &:active {
+    &::after {
+      background: black;
+      opacity: 0.32;
+    }
+  }
+}
+
+%button-simple {
+  @extend %button-base;
+
+  --background: transparent;
+  --color: inherit;
+
+  border-color: transparent;
+
+  &:hover,
+  &:focus,
+  &:focus-within {
+    --background: #{$c-white-26};
+  }
+}
+
+%button-inline {
+  @extend %button-base;
+
+  --border: none;
+  --background: transparent;
+  --font: inherit;
+
+  padding: 0;
+  transform: none;
+}

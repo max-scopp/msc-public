@@ -1,0 +1,10 @@
+@import "card";
+
+%dialog-base {
+  @extend %card-base;
+
+  max-height: 80vh;
+
+  display: flex;
+  flex-direction: column;
+}

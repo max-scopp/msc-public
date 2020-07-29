@@ -1,0 +1,13 @@
+msc-list {
+  display: grid;
+
+  gap: var(--gap);
+
+  justify-items: stretch;
+  align-items: start;
+
+  grid-template-columns: auto;
+  grid-auto-flow: var(--direction);
+
+  //overflow: auto;
+}

@@ -1,0 +1,27 @@
+@import "atoms/dialog";
+
+:host {
+  display: block;
+  @extend %card-base;
+
+  --shadow: #{$bsh-small};
+
+  .lead,
+  .trailer {
+    padding: var(--space);
+
+    &:empty {
+      display: none;
+    }
+  }
+
+  .lead {
+    margin: calc(var(--space) * -1);
+    margin-bottom: 0;
+  }
+
+  .trailer {
+    margin: calc(var(--space) * -1);
+    margin-top: 0;
+  }
+}

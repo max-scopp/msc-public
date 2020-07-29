@@ -1,0 +1,56 @@
+@import "atoms/button";
+
+:host {
+  @extend %button-base;
+
+  transition: transform $cb-decelerate 90ms;
+}
+
+:host([block]) {
+  display: flex;
+  justify-content: center;
+}
+
+:host([theme="primary"]) {
+  --background: var(--primary);
+}
+
+:host([theme="big"]) {
+  font-size: 150%;
+  font-weight: 400;
+}
+
+:host([theme="small"]) {
+  font-size: 90%;
+}
+
+:host([theme="minimal"]) {
+  --background: var(--secondary-alt);
+
+  &:active {
+    transform: scale3d(0.92, 0.92, 0.92);
+  }
+}
+
+:host([state="warn"]) {
+  --background: var(--yellow);
+}
+
+:host([state="good"]) {
+  --background: var(--green);
+}
+
+:host([state="bad"]) {
+  --background: var(--red);
+}
+
+:host([state="info"]) {
+  --background: var(--cyan);
+}
+
+:host([disabled]) {
+  --background: var(--cmp-disabled);
+  --color: var(--cmp-disabled-text) !important;
+
+  cursor: not-allowed;
+}

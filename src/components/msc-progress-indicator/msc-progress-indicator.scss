@@ -1,0 +1,36 @@
+msc-progress-indicator {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  &.hidden {
+    display: none;
+  }
+
+  &.close {
+    animation: fwScaleDown forwards 400ms;
+
+    &::after {
+      width: 100%;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--width);
+    min-width: 75px;
+    height: 3px;
+    background: var(--primary);
+
+    box-shadow: 0 -1px 5px var(--primary);
+
+    will-change: width;
+    transition: width $cb-decelerate 200ms;
+
+    border-bottom-right-radius: 10px;
+  }
+}

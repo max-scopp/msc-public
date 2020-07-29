@@ -1,0 +1,812 @@
+{
+  "version": 1.1,
+  "tags": [
+    {
+      "name": "msc-badge",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "block",
+          "description": ""
+        },
+        {
+          "name": "color",
+          "description": ""
+        }
+      ],
+      "references": [
+        {
+          "name": "Source code",
+          "url": "./https:/github.com/max-scopp/ui-studio/src/components/msc-badge/msc-badge.tsx"
+        }
+      ]
+    },
+    {
+      "name": "msc-button",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "disabled",
+          "description": "Wether or not the component is actually disabled."
+        },
+        {
+          "name": "to",
+          "description": "Optional, if provided, the button contains an a11y-anchor inside."
+        },
+        {
+          "name": "state",
+          "description": "What state the button has.",
+          "values": [
+            {
+              "name": "bad"
+            },
+            {
+              "name": "good"
+            },
+            {
+              "name": "info"
+            },
+            {
+              "name": "normal"
+            },
+            {
+              "name": "warn"
+            }
+          ]
+        },
+        {
+          "name": "target",
+          "description": "If \"to\" is provided, should the link have a target be set?"
+        },
+        {
+          "name": "theme",
+          "description": "What kind of default-provided theme shall be applied.",
+          "values": [
+            {
+              "name": "big"
+            },
+            {
+              "name": "default"
+            },
+            {
+              "name": "minimal"
+            },
+            {
+              "name": "primary"
+            },
+            {
+              "name": "small"
+            }
+          ]
+        },
+        {
+          "name": "type",
+          "description": "What kind of button this one is."
+        }
+      ],
+      "references": [
+        {
+          "name": "Source code",
+          "url": "./https:/github.com/max-scopp/ui-studio/src/components/msc-button/msc-button.tsx"
+        }
+      ]
+    },
+    {
+      "name": "msc-button-group",
+      "description": {
+        "kind": "markdown",
+        "value": "Collects buttons. Horizontally. Supports `--gap`.\nIf `autohide` is true, any items which to not fit will be\nrendered as <msc-item /> within an Menu."
+      },
+      "attributes": [
+        {
+          "name": "autohide",
+          "description": "Hide's the last X items that don't fit to the parent container.\nitems will be re-rendered as <msc-item />"
+        }
+      ],
+      "references": [
+        {
+          "name": "Source code",
+          "url": "./https:/github.com/max-scopp/ui-studio/src/components/msc-button-group/msc-button-group.tsx"
+        }
+      ]
+    },
+    {
+      "name": "msc-card",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "to",
+          "description": "Link where to go to when click"
+        },
+        {
+          "name": "target",
+          "description": "if an href (usually called \"to\" as attribute/prop) is provided,\nshould there be a specific target type applied?"
+        }
+      ],
+      "references": [
+        {
+          "name": "Source code",
+          "url": "./https:/github.com/max-scopp/ui-studio/src/components/msc-card/msc-card.tsx"
+        }
+      ]
+    },
+    {
+      "name": "msc-collapsible",
+      "description": {
+        "kind": "markdown",
+        "value": "TODO: Allow Animations; set duration via css-var"
+      },
+      "attributes": [
+        {
+          "name": "open",
+          "description": ""
+        }
+      ],
+      "references": [
+        {
+          "name": "Source code",
+          "url": "./https:/github.com/max-scopp/ui-studio/src/components/msc-collapsible/msc-collapsible.tsx"
+        }
+      ]
+    },
+    {
+      "name": "msc-content",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "align-x",
+          "description": "Overwrites the placement of content (NOT items!) on the horizontal axis\nSee flexbox values\nMay swap with horizontal alignment for correct behaviour"
+        },
+        {
+          "name": "align-y",
+          "description": "Overwrite placement of content (NOT items!) on the vertical axis\nSee flexbox values\nMay swap with horizontal alignment for correct behaviour"
+        },
+        {
+          "name": "center",
+          "description": "Centers the content of this container (NOT items!) on both axis."
+        },
+        {
+          "name": "content-scroll",
+          "description": "Enables purposefully scrolling for the content of this tag."
+        },
+        {
+          "name": "track-x",
+          "description": "Changes the placement direction of this container.\nSee flexbox specs. Applies \"weird behaviour\" fixes of flexbox."
+        },
+        {
+          "name": "track-y",
+          "description": "Changes the placement direction of this container.\nSee flexbox specs. Applies \"weird behaviour\" fixes of flexbox."
+        }
+      ],
+      "references": [
+        {
+          "name": "Source code",
+          "url": "./https:/github.com/max-scopp/ui-studio/src/components/msc-content/msc-content.tsx"
+        }
+      ]
+    },
+    {
+      "name": "msc-define",
+      "description": {
+        "kind": "markdown",
+        "value": "Utilizes DataProvider Service to define the children asap the component can be initialized."
+      },
+      "attributes": [
+        {
+          "name": "group",
+          "description": ""
+        },
+        {
+          "name": "name",
+          "description": ""
+        }
+      ],
+      "references": [
+        {
+          "name": "Source code",
+          "url": "./https:/github.com/max-scopp/ui-studio/src/components/msc-define/msc-define.tsx"
+        }
+      ]
+    },
+    {
+      "name": "msc-display-filter",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "for",
+          "description": ""
+        }
+      ],
+      "references": [
+        {
+          "name": "Source code",
+          "url": "./https:/github.com/max-scopp/ui-studio/src/components/msc-display-filter/msc-display-filter.tsx"
+        }
+      ]
+    },
+    {
+      "name": "msc-form-field",
+      "description": {
+        "kind": "markdown",
+        "value": "TODO: Implement"
+      },
+      "attributes": [
+        {
+          "name": "label",
+          "description": ""
+        }
+      ],
+      "references": [
+        {
+          "name": "Source code",
+          "url": "./https:/github.com/max-scopp/ui-studio/src/components/msc-form-field/msc-form-field.tsx"
+        }
+      ]
+    },
+    {
+      "name": "msc-grid",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "base",
+          "description": "The minimum width of an item of the grid"
+        },
+        {
+          "name": "center-content",
+          "description": "Center container of all item-containers?"
+        },
+        {
+          "name": "center-items",
+          "description": "Center grid items in their item-container?"
+        },
+        {
+          "name": "gap",
+          "description": "The minimum width of an item of the grid"
+        },
+        {
+          "name": "center-items",
+          "description": "Should every cell's height equal to it's --base width?"
+        },
+        {
+          "name": "template",
+          "description": "Define's the grid-template"
+        }
+      ],
+      "references": [
+        {
+          "name": "Source code",
+          "url": "./https:/github.com/max-scopp/ui-studio/src/components/msc-grid/msc-grid.tsx"
+        }
+      ]
+    },
+    {
+      "name": "msc-icon",
+      "description": {
+        "kind": "markdown",
+        "value": "TODO: This class is still buggy for subsequent updates."
+      },
+      "attributes": [
+        {
+          "name": "name",
+          "description": "The iconName to resolve. This is dependant on how you declared your own\nIconSet."
+        },
+        {
+          "name": "set",
+          "description": "The IconSet to pick the icon-name from.\nIf not provied, the `defaultIconSet` is used from ApplicationService."
+        }
+      ],
+      "references": [
+        {
+          "name": "Source code",
+          "url": "./https:/github.com/max-scopp/ui-studio/src/components/msc-icon/msc-icon.tsx"
+        }
+      ]
+    },
+    {
+      "name": "msc-input",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "autocomplete",
+          "description": "Should this input field autocomplete?\nIgnored for type=\"radio\" and type=\"checkbox\"",
+          "values": [
+            {
+              "name": "false"
+            },
+            {
+              "name": "true"
+            }
+          ]
+        },
+        {
+          "name": "disabled",
+          "description": "Is your input disabled?",
+          "values": [
+            {
+              "name": "false"
+            },
+            {
+              "name": "true"
+            }
+          ]
+        },
+        {
+          "name": "name",
+          "description": "Under what name should the value be stored inside the form?"
+        },
+        {
+          "name": "placeholder",
+          "description": "The value to display when there is no value."
+        },
+        {
+          "name": "required",
+          "description": "Is your input required?",
+          "values": [
+            {
+              "name": "false"
+            },
+            {
+              "name": "true"
+            }
+          ]
+        },
+        {
+          "name": "type",
+          "description": "The type of input you need.",
+          "values": [
+            {
+              "name": "checkbox"
+            },
+            {
+              "name": "color"
+            },
+            {
+              "name": "date"
+            },
+            {
+              "name": "datetime"
+            },
+            {
+              "name": "email"
+            },
+            {
+              "name": "month"
+            },
+            {
+              "name": "number"
+            },
+            {
+              "name": "password"
+            },
+            {
+              "name": "radio"
+            },
+            {
+              "name": "search"
+            },
+            {
+              "name": "tel"
+            },
+            {
+              "name": "text"
+            },
+            {
+              "name": "textarea"
+            },
+            {
+              "name": "url"
+            },
+            {
+              "name": "week"
+            }
+          ]
+        },
+        {
+          "name": "value",
+          "description": "The value the component has/holds."
+        }
+      ],
+      "references": [
+        {
+          "name": "Source code",
+          "url": "./https:/github.com/max-scopp/ui-studio/src/components/msc-input/msc-input.tsx"
+        }
+      ]
+    },
+    {
+      "name": "msc-item",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "active",
+          "description": ""
+        },
+        {
+          "name": "to",
+          "description": "An attribute/prop that is usually exposed as \"to\" which intern will\nopen the provided link when activated.\nOr whatever the criteria is.\n!IMPORTANT! To make your life easier, be sure to set the prop to \"reflect\" the current value!"
+        },
+        {
+          "name": "interactive",
+          "description": ""
+        },
+        {
+          "name": "target",
+          "description": "if an href (usually called \"to\" as attribute/prop) is provided,\nshould there be a specific target type applied?"
+        }
+      ],
+      "references": [
+        {
+          "name": "Source code",
+          "url": "./https:/github.com/max-scopp/ui-studio/src/components/msc-item/msc-item.tsx"
+        }
+      ]
+    },
+    {
+      "name": "msc-list",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "direction",
+          "description": "",
+          "values": [
+            {
+              "name": "horizontal"
+            },
+            {
+              "name": "vertical"
+            }
+          ]
+        },
+        {
+          "name": "gap",
+          "description": ""
+        },
+        {
+          "name": "reverse",
+          "description": ""
+        }
+      ],
+      "references": [
+        {
+          "name": "Source code",
+          "url": "./https:/github.com/max-scopp/ui-studio/src/components/msc-list/msc-list.tsx"
+        }
+      ]
+    },
+    {
+      "name": "msc-loader",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [],
+      "references": [
+        {
+          "name": "Source code",
+          "url": "./https:/github.com/max-scopp/ui-studio/src/components/msc-loader/msc-loader.tsx"
+        }
+      ]
+    },
+    {
+      "name": "msc-menu",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "open",
+          "description": ""
+        },
+        {
+          "name": "position-to",
+          "description": ""
+        }
+      ],
+      "references": [
+        {
+          "name": "Source code",
+          "url": "./https:/github.com/max-scopp/ui-studio/src/components/msc-menu/msc-menu.tsx"
+        }
+      ]
+    },
+    {
+      "name": "msc-modal",
+      "description": {
+        "kind": "markdown",
+        "value": "If you provide custom actions and those need to onAffirm or onReject, don't\nforget to add data-positive or data-negative!"
+      },
+      "attributes": [
+        {
+          "name": "closing-x",
+          "description": "Show's an closing-X at the top right."
+        },
+        {
+          "name": "message",
+          "description": "The important message you need to devliever to your user.\nIf an array is supplied, each item will be wrapped in an paragraph."
+        },
+        {
+          "name": "text-negative",
+          "description": "If provided, this value is used to render the default, negative button.\nOnly needed to overwrite the text, you can also overwrite the whole button\nif you define \"data-negative\" as attribute inside your slot named action."
+        },
+        {
+          "name": "text-positive",
+          "description": "If provided, this value is used to render the default, positive button.\nOnly needed to overwrite the text, you can also overwrite the whole button\nif you define \"data-positive\" as attribute inside your slot named action."
+        },
+        {
+          "name": "title",
+          "description": "The title to display at the top. Supply a falsy value to disclose."
+        },
+        {
+          "name": "global",
+          "description": "Don't position using \"absolute\".\nIgnore parent, use position \"fixed\" when true."
+        },
+        {
+          "name": "is-visible",
+          "description": "*** DO NOT SET THIS VALUE BY HAND; THIS IS READONLY/INITIAL ASSIGNMENT ***\nIf you're using a framework, you can set it. Otherwise, no.\nCall myModal.toggle() in html. Designed for JSX assignment."
+        },
+        {
+          "name": "omit",
+          "description": "Not only can you overwrite the texts and buttons that are present by default,\nusing this prop you are also be able to exclude certain actions.\nE.g. Dialogs.alert() will omit the negative action."
+        },
+        {
+          "name": "role",
+          "description": "Defines the Modal-Role. Is it a dismissable alert or dialog?",
+          "values": [
+            {
+              "name": "alert"
+            },
+            {
+              "name": "alertdialog"
+            },
+            {
+              "name": "dialog"
+            }
+          ]
+        }
+      ],
+      "references": [
+        {
+          "name": "Source code",
+          "url": "./https:/github.com/max-scopp/ui-studio/src/components/msc-modal/msc-modal.tsx"
+        }
+      ]
+    },
+    {
+      "name": "msc-progress-indicator",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [],
+      "references": [
+        {
+          "name": "Source code",
+          "url": "./https:/github.com/max-scopp/ui-studio/src/components/msc-progress-indicator/msc-progress-indicator.tsx"
+        }
+      ]
+    },
+    {
+      "name": "msc-request-notifier",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [],
+      "references": [
+        {
+          "name": "Source code",
+          "url": "./https:/github.com/max-scopp/ui-studio/src/components/msc-request-notifier/msc-request-notifier.tsx"
+        }
+      ]
+    },
+    {
+      "name": "msc-sidebar",
+      "description": {
+        "kind": "markdown",
+        "value": "ce# msc-sidebar"
+      },
+      "attributes": [
+        {
+          "name": "auto-show",
+          "description": "Should the Sidebar expand when you're near it?"
+        },
+        {
+          "name": "fixed",
+          "description": "If true, styling applies position: fixed instead of position: absolute"
+        },
+        {
+          "name": "open",
+          "description": "Should the Sidebar always be open?"
+        },
+        {
+          "name": "overlay",
+          "description": "Wether or not the sidebar should take up space in the document.\nIf true, full content is exposed on hovering/tap."
+        },
+        {
+          "name": "side",
+          "description": "If true, styling applies position: fixed instead of position: absolute",
+          "values": [
+            {
+              "name": "left"
+            },
+            {
+              "name": "right"
+            }
+          ]
+        },
+        {
+          "name": "single",
+          "description": "Controls wether or not only one item can be expanded."
+        }
+      ],
+      "references": [
+        {
+          "name": "Source code",
+          "url": "./https:/github.com/max-scopp/ui-studio/src/components/msc-sidebar/msc-sidebar.tsx"
+        }
+      ]
+    },
+    {
+      "name": "msc-title",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "subline",
+          "description": ""
+        }
+      ],
+      "references": [
+        {
+          "name": "Source code",
+          "url": "./https:/github.com/max-scopp/ui-studio/src/components/msc-title/msc-title.tsx"
+        }
+      ]
+    },
+    {
+      "name": "msc-toast",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "dismissable",
+          "description": "If true, toast will be gone when clicked."
+        },
+        {
+          "name": "indicator",
+          "description": "If true, only the most important things are rendered to make the toast work.\nPure extendabillity for your!"
+        },
+        {
+          "name": "message",
+          "description": "The message to show in the Toast."
+        },
+        {
+          "name": "message-title",
+          "description": "A small string that's rendered <**bold** />"
+        },
+        {
+          "name": "state",
+          "description": "Visual state how the tosat looks",
+          "values": [
+            {
+              "name": "danger"
+            },
+            {
+              "name": "info"
+            },
+            {
+              "name": "normal"
+            },
+            {
+              "name": "success"
+            },
+            {
+              "name": "warning"
+            }
+          ]
+        },
+        {
+          "name": "timeout",
+          "description": "How long the toast shall be visible. Use a falsy value for no timeout."
+        }
+      ],
+      "references": [
+        {
+          "name": "Source code",
+          "url": "./https:/github.com/max-scopp/ui-studio/src/components/msc-toast/msc-toast.tsx"
+        }
+      ]
+    },
+    {
+      "name": "msc-toast-container",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [],
+      "references": [
+        {
+          "name": "Source code",
+          "url": "./https:/github.com/max-scopp/ui-studio/src/components/msc-toast-container/msc-toast-container.tsx"
+        }
+      ]
+    },
+    {
+      "name": "msc-tooltip",
+      "description": {
+        "kind": "markdown",
+        "value": "The \"tooltip\" is an essential component that helps you to define a more descriptive message for another element.\n\nIt also helps you to describe icons and any other component(s) that aren't descriptive enough by default for disabled users.\n\nATTENTION: This component will always add itself as last element to the viewport.\nThis is to ensure that the tooltip is always visible in any case, additionally, it ensures that nested - scrollable views, do not conflict in the global viewport offset.\n\nJust keep in mind that you declare the component context-based, but the component itself is rendered globally, while maintaining it's created context.\n\nYou can also overwrite the target-context by providing a \"for\" selector."
+      },
+      "attributes": [
+        {
+          "name": "for",
+          "description": "Idenficator (id) for targeted element. Fallback to <slot/> if not provided.\nTooltip will be placed relative to the found element.\nIf the element is not found, the component will break (but a developer notice will be logged)."
+        },
+        {
+          "name": "global",
+          "description": "All tooltips are now globally positioned by default.\nIt's just better."
+        },
+        {
+          "name": "label",
+          "description": "What should the displayed within the tooltip?"
+        },
+        {
+          "name": "position",
+          "description": "Where the actual tooltip needs to be positioned.\nIgnored when there is no space.",
+          "values": [
+            {
+              "name": "bottom"
+            },
+            {
+              "name": "left"
+            },
+            {
+              "name": "right"
+            },
+            {
+              "name": "top"
+            }
+          ]
+        }
+      ],
+      "references": [
+        {
+          "name": "Source code",
+          "url": "./https:/github.com/max-scopp/ui-studio/src/components/msc-tooltip/msc-tooltip.tsx"
+        }
+      ]
+    }
+  ]
+}

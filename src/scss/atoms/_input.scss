@@ -1,0 +1,154 @@
+$input-fz-base: 15px !default;
+$input-background: #{rgba($c-shade-29, 0.5)} !default;
+$input-border-width: 0 !default;
+
+$input-boolean-background: var(--mode) !default;
+$input-boolean-border-width: 1px !default;
+
+$input-padding-y: em(7px, $input-fz-base) !default;
+$input-padding-x: em(12px, $input-fz-base) !default;
+
+%input-core {
+  --background: var(--mode);
+  --border: var(--cmp-borders);
+  --color: var(--text-on-light);
+  --font: var(--sans);
+
+  box-sizing: content-box;
+
+  position: relative;
+  display: block;
+
+  appearance: none;
+  overflow: hidden;
+
+  padding: $input-padding-y $input-padding-x;
+
+  min-height: 1em;
+
+  font-size: rem($input-fz-base);
+  font-family: var(--font);
+  font-weight: bold;
+
+  letter-spacing: rem(1px);
+  line-height: rem(6px);
+
+  border: none;
+}
+
+////
+/// text, checkbox, pretty muich everything like that
+%input-base {
+  --background: #{$input-background};
+
+  @extend %input-core;
+  line-height: 1.4;
+
+  border-radius: rem(6px);
+  background: var(--background);
+  border: $input-border-width solid var(--border);
+}
+
+////
+/// <label> that wraps the whole input
+%label-base {
+  padding: 0 $input-padding-x;
+  color: var(--cmp-border-darker);
+  user-select: none;
+}
+
+////
+/// The actual box that gets tick'ed
+%boolean-box {
+  @extend %input-core;
+  padding: unset;
+
+  display: inline-block;
+
+  width: rem(24px);
+  height: rem(24px);
+
+  background: $input-boolean-background;
+  border: $input-boolean-border-width solid var(--border);
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+  }
+
+  &:not(:checked)::after {
+    transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
+  }
+}
+
+////
+/// Text for radio/checkbox
+
+%radio-base {
+  @extend %boolean-box;
+  border-radius: 1000px;
+  color: var(--primary);
+}
+
+%checkbox-base {
+  @extend %boolean-box;
+  color: var(--green);
+  border-radius: rem(3px);
+}
+
+%boolean-active {
+  --size: 33%;
+  position: relative;
+
+  &::after {
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+
+    min-width: 3px;
+    min-height: 3px;
+
+    width: var(--size);
+    height: var(--size);
+
+    background: currentColor;
+  }
+}
+
+%checkbox-active-inner {
+  @extend %boolean-active;
+}
+%radio-active-inner {
+  @extend %boolean-active;
+}
+
+%select-base {
+  @extend %input-core;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+
+  border-bottom: $input-border-width solid var(--border);
+  //border-radius: em(5px, $input-fz-base);
+
+  &::after {
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+
+    top: 50%;
+    right: $input-padding-x; // divide by two because it's translated 50%
+
+    // Y-25% because bottom half of border is transparent
+    transform: translate3d(0, -25%, 0);
+
+    border: 0.5em solid transparent;
+    border-top-color: currentColor;
+  }
+}

@@ -1,0 +1,83 @@
+:root {
+  font-family: $ff-main;
+  font-size: $fz-root;
+
+  > body {
+    font-size: #{$fz-base/$fz-root}rem;
+  }
+}
+
+a,
+.link {
+  color: var(--primary-alt);
+}
+
+p {
+  margin-top: var(--paragraph-margin-top);
+  margin-bottom: var(--paragraph-margin-bottom);
+}
+
+dl,
+ol,
+ul {
+  margin-top: var(--list-margin-top);
+  margin-bottom: var(--list-margin-bottom);
+}
+
+pre,
+code,
+samp {
+  font-family: var(--monospace-font-family);
+  font-size: var(--pre-font-size);
+}
+
+pre {
+  margin-top: var(--pre-margin-top);
+  margin-bottom: var(--pre-margin-bottom);
+  overflow-x: scroll;
+}
+
+.sub-line {
+  font-size: 82%;
+  font-weight: 500;
+}
+
+.muted {
+  color: var(--cmp-disabled);
+}
+
+h1,
+.msc-heading-1 {
+  @extend %heading-base;
+  @extend %heading-1;
+}
+
+h2,
+.msc-heading-2 {
+  @extend %heading-base;
+  @extend %heading-2;
+}
+
+h3,
+.msc-heading-3 {
+  @extend %heading-base;
+  @extend %heading-3;
+}
+
+h4,
+.msc-heading-4 {
+  @extend %heading-base;
+  @extend %heading-4;
+}
+
+h5,
+.msc-heading-5 {
+  @extend %heading-base;
+  @extend %heading-5;
+}
+
+h6,
+.msc-heading-6 {
+  @extend %heading-base;
+  @extend %heading-6;
+}

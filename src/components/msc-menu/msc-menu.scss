@@ -1,0 +1,12 @@
+@import "atoms/lists";
+
+:host {
+    display: block;
+    background: var(--mode);
+
+    @extend %menu-base;
+}
+
+:host([hidden]) {
+    display: none;
+}

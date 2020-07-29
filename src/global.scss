@@ -1,0 +1,105 @@
+@import "scss/engine";
+@import "scss/base/all";
+@import "scss/generic/all";
+@import "scss/atoms/all";
+// ...other modules
+
+.ag-cell {
+  line-height: 24px !important;
+}
+
+button {
+  @extend %button-base;
+}
+
+:root {
+  --sans: #{$ff-sans};
+  --roboto: #{$ff-roboto};
+
+  --phone-end: #{$breakpoint-phone-end};
+  --tablet-start: #{$breakpoint-tablet-start};
+  --tablet-landscape-start: #{$breakpoint-tablet-landscape-start};
+  --desktop-start: #{$breakpoint-desktop-start};
+  --big-desktop-start: #{$breakpoint-big-desktop-start};
+}
+
+msc-sidebar > msc-tab-bar > msc-tab-button {
+  --radius: 0;
+  border: 1px solid var(--border);
+
+  ~ msc-tab-button {
+    margin-left: -1px;
+  }
+
+  &[active] {
+    --background: var(--primary);
+    --border: var(--black-translucent);
+    --shadow: var(--border);
+    color: white;
+    z-index: 1;
+  }
+}
+
+.fix-text-left {
+  margin-left: 0.6ch;
+}
+
+.fix-text-right {
+  margin-right: 0.6ch;
+}
+
+:root {
+  --mode: var(--bg-light);
+
+  height: 100vh;
+  background: var(--mode);
+}
+
+::selection {
+  background: var(--primary);
+  color: var(--text-on-dark);
+}
+
+:focus {
+  --outline: var(--background);
+  outline: 4px auto var(--outline);
+  outline-offset: -4px;
+
+  z-index: 1;
+
+  .use-mouse & {
+    outline: 0 !important;
+  }
+}
+
+[to] {
+  cursor: pointer;
+}
+
+svg[viewBox] {
+  max-width: 100%;
+  height: auto;
+
+  // if you use svg's corrently, then
+  // in case both width AND height exceeds it's boundaries
+  // this should, in theory, keep both width and height at the max,
+  // while scaling the svg's contents down to fit.
+  // A correctly setup SVG contains both width, height and an viewBox.
+  max-height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  // cap image size to container
+  max-width: 100%;
+
+  // preserve aspect ratio, if possible
+  height: auto;
+
+  // if aspect ratio cannot be kept, scale image down
+  // in order to _contain_ the whole image within the available img-space
+  object-fit: contain;
+}

@@ -1,0 +1,9 @@
+@import "atoms/headings";
+
+:host {
+  display: block;
+  font-weight: bold;
+
+  @extend %heading-base;
+  @extend %heading-1;
+}

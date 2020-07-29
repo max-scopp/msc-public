@@ -1,0 +1,59 @@
+@import "atoms/input"; //
+
+msc-input {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  :focus {
+    outline: none;
+  }
+
+  .input {
+    flex: 1;
+
+    &__toggle--checkbox,
+    &__toggle--radio {
+      height: 37px;
+      width: 37px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      > span {
+        visibility: hidden;
+      }
+
+      & > span {
+        visibility: visible;
+      }
+    }
+
+    &--radio {
+      @extend %radio-base;
+    }
+
+    &__toggle--radio.is-checked &--radio {
+      @extend %checkbox-active-inner;
+    }
+
+    &--checkbox {
+      @extend %checkbox-base;
+    }
+
+    &__toggle--checkbox.is-checked &--checkbox {
+      @extend %radio-active-inner;
+    }
+
+    &--text,
+    &--textarea {
+      @extend %input-base;
+    }
+
+    &--password {
+      @extend %input-base;
+      -webkit-text-security: square;
+    }
+  }
+}

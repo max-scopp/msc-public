@@ -1,0 +1,104 @@
+@import "atoms/dialog";
+$space: 20px;
+
+%negate-lead {
+  margin: -$space;
+  padding: $space;
+  margin-bottom: 0;
+}
+
+%negate-end {
+  margin: -$space;
+  padding: $space;
+  margin-top: 0;
+}
+
+%negate-h {
+  margin: 0 #{-$space};
+  padding: 0 $space;
+}
+
+msc-modal {
+  @include cover-parent;
+
+  --backdrop: #{$c-black-26};
+  --border: var(--cmp-borders);
+
+  display: grid;
+  place-content: start center;
+
+  padding-top: 10vh;
+  z-index: 1;
+
+  > .backdrop {
+    @include cover-parent;
+    background: var(--backdrop);
+
+    will-change: opacity, transform;
+
+    opacity: 0;
+    animation: forwards fwFadeIn 160ms $cb-authentic;
+  }
+
+  > .modal {
+    --space: #{$space};
+    --max-width: 80vw;
+
+    @extend %dialog-base;
+
+    width: var(--width);
+    max-width: var(--max-width);
+
+    overflow: hidden;
+
+    animation: forwards fwScaleIn 140ms $cb-decelerate;
+    transform-origin: center top;
+    opacity: 0;
+
+    > h5 {
+      @extend %card-title;
+      @extend %negate-lead;
+
+      border-bottom: 1px solid var(--border);
+    }
+
+    > main {
+      @extend %negate-h;
+      min-height: 64px;
+
+      overflow: auto;
+
+      // If this is not present, margins may be neglected.
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+        height: 1px;
+      }
+    }
+
+    .window-close {
+      position: absolute;
+      top: 0;
+      width: 60px;
+      height: 60px;
+      right: 0;
+      display: grid;
+      place-items: center;
+      border-radius: unset;
+      box-shadow: unset;
+    }
+
+    > footer {
+      @extend %negate-end;
+      border-top: 1px solid var(--border);
+
+      display: flex;
+      justify-content: space-between;
+
+      > .end {
+        flex: none;
+      }
+    }
+  }
+}

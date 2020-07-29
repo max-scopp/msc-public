@@ -1,0 +1,79 @@
+@import "atoms/lists";
+
+:host {
+  @extend %sidebar-container-base;
+
+  --background: var(--bg-light);
+  --background-lead: var(--primary);
+
+  grid-template:
+    "lead" auto
+    "main" 1fr
+    "trailer" 60px;
+
+  .activator-space {
+    position: absolute;
+    left: 100%;
+    top: 0;
+
+    width: 16px;
+    height: 100%;
+  }
+
+  .sidebar {
+    &__lead {
+      grid-area: lead;
+      display: flex;
+      flex-direction: column;
+      //margin-bottom: rem(5px);
+    }
+
+    &__list {
+      @extend %list-base;
+    }
+
+    &__trailer {
+      grid-area: trailer;
+      padding: 15px 20px;
+    }
+  }
+}
+
+:host([overlay]) {
+  position: absolute;
+}
+
+:host(.is-fixed) {
+  position: fixed;
+}
+
+:host([overlay][side]),
+:host(.is-fixed[side]) {
+  top: 0;
+  left: 0;
+
+  height: 100%;
+  transform: translateX(-100%);
+  transform: translateX(#{unquote("calc(-100% - 1px)")});
+}
+
+:host([side="right"]) {
+  right: 0;
+  left: unset;
+
+  transform: translateX(100%);
+  transform: translateX(#{unquote("calc(100% + 1px)")});
+
+  .activator-space {
+    left: unset;
+    right: 100%;
+  }
+}
+
+:host(.is-visible) {
+  @extend %sidebar-container-visible;
+}
+
+:host(.is-active) {
+  @extend %sidebar-container-active;
+}
